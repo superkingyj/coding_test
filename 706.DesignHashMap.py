@@ -7,10 +7,8 @@ class MyHashMap(object):
         self.table[key] = value
 
     def get(self, key: int) -> int:
-        if key in self.table:
-            return self.table[key]
+        if key in self.table: return self.table[key]
         return -1
 
     def remove(self, key: int) -> None:
-        if key in self.table:
-            del self.table[key]
+        if key in self.table: del self.table[key]
