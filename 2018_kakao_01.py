@@ -1,4 +1,5 @@
 def solution(n, arr1, arr2):
+    '''
     answer = []
     binaryStrArr, map = [],[]
 
@@ -19,8 +20,19 @@ def solution(n, arr1, arr2):
             if item[i] == "1": str_ += "#"
             else: str_ += " "
         answer.append(str_)
-
-    return answer
+    '''
+    
+    arr = []
+    for i in range(n):
+        # bin(5|7) # ==> '0b111'
+        # 111 --> 00111
+        arr.append(
+            bin(arr1[i] | arr2[i])[2:]
+                .zfill(n)
+                .replace("1", "#")
+                .replace("0", " ")
+        )
+    return arr
 
 
 print(solution(5,[9,20,28,18,11],[30,1,21,17,28])==["#####","# # #", "### #", "# ## ", "#####"])
