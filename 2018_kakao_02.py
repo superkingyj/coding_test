@@ -23,6 +23,38 @@ def solution(dartResult):
             else: point = point * -1
         pointList.append(point)    
     return sum(pointList)
+    '''
+    score = [0,0,0,0]
+	index = 0
+	tmpnum = ''
+	for c in dartResult:
+		if tmpnum:
+			index += 1
+			if c.isnumeric():
+				score[index] = int(tmpnum + c)
+				tmpnum = ''
+				continue
+			else:
+				score[index] = int(tmpnum)
+				tmpnum = ''
+
+		if c.isnumeric():
+			tmpnum = c
+		elif c.isalpha():
+			if c == 'S':
+				score[index] **= 1
+			elif c == 'D':
+				score[index] **= 2
+			elif c == 'T':
+				score[index] **= 3
+		else:
+			if c == '#':
+				score[index] *= -1
+			elif c== '*':
+				score[index-1] *= 2
+				score[index] *= 2
+	return sum(score[1:])
+    '''
 
 print(solution("1S2D*3T")==37)
 print(solution("1D2S#10S")==9)
