@@ -30,7 +30,6 @@ print(solution(
 "- and - and - and chicken 100",
 "- and - and - and - 150"])==[1,1,1,1,2,4])
 
-
 '''
 1. make infoDictList --> [{language:~, job:~, career:~, food:~, grade:~} * len(info)]
 2. put info into the dict
