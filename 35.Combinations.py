@@ -24,7 +24,7 @@ class Solution:
 # def combination(3, ??) -> [??, 3], 
 
 sol = Solution()
-print(sol.combine(4, 2))
+print(sol.combine(4,2))
 print(sol.combine(1,1))
 
 '''
@@ -42,3 +42,7 @@ print(sol.combine(1,1))
 '''
 [[1]]
 '''
+import itertools
+
+def combine(self, n: int, k:int ) -> List[List[int]] :
+    return list(.combinations(range(1,n+1),k))

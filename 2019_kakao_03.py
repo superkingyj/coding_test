@@ -42,7 +42,6 @@ def getMinimumKeys(uniquenessKeys):
     print(f'after: {uniquenessKeys}')
     return uniquenessKeys
 
-
 def solution(relation):
     row_len = len(relation)
     column_len = len(relation[0])
