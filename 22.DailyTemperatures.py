@@ -4,7 +4,7 @@ class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
         stack = []
         result = [0] * len(temperatures)
-        for _index, temp in enumerate(temperatures):
+        for _index, temp in (temperatures):
             while stack and temp > stack[-1][1] :
                 (targetIndex, _) = stack.pop()
                 result[targetIndex] = _index - targetIndex

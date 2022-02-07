@@ -1,7 +1,6 @@
 from typing import List
 import collections
-from collections import deque
-
+from collections import deque 
 
 class Solution:
     def findItinerary(self, tickets: List[List[str]]) -> List[str]:
@@ -34,7 +33,7 @@ class Solution:
             print(f"place : {place}, graph[{place}]: {graph[place]}")
             if not graph[place]: 
                 break
-            place = graph[place].popleft()
+            place = graph[place].
             visited.append(place)
         return visited
 '''
